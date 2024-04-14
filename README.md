@@ -22,4 +22,9 @@ Portanto, é importante adicionar verificações de nulidade (null checks) adequ
 <p>O código estabelece uma conexão com um banco de dados MySQL usando JDBC. No entanto, não há chamadas explícitas para fechar as conexões com o banco de dados (Connection), nem para fechar os objetos Statement e ResultSet, que são recursos importantes que precisam ser liberados após o uso.<br><br>
 Portanto, é importante adicionar chamadas para fechar as conexões com o banco de dados (close()) após o término de sua utilização.</p>
 
+<h2>Erro do código:</h2>
+<ul>
+  <li>As váriaveis 'nome' e 'result' foram declaradas mas não inicializadas de forma explícita. É importante que sejam inicializadas para que seja evitado erros lógicos no código. </li>
+</ul>
+
 
