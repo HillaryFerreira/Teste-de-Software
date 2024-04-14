@@ -11,7 +11,7 @@
 <p>O código poderia estar melhor identado, com espaçamento melhor para visualização mais clara e com mais comentarios do que esta sendo feito em cada trecho do código.</p>
 
 <h2>TODOS OS NULLPOINTERS FORAM TRATADOS?</h2>
-<p>não houve tratamento adequado para possíveis NullPointerExceptions. O código não verifica se os objetos retornados, como Connection, Statement e ResultSet, são nulos antes de tentar acessá-los ou utilizá-los. Isso pode levar a exceções não tratadas se esses objetos não forem inicializados corretamente ou se ocorrerem erros durante sua criação ou execução.<br>
+<p>Não houve tratamento adequado para possíveis NullPointerExceptions. O código não verifica se os objetos retornados, como Connection, Statement e ResultSet, são nulos antes de tentar acessá-los ou utilizá-los. Isso pode levar a exceções não tratadas se esses objetos não forem inicializados corretamente ou se ocorrerem erros durante sua criação ou execução.<br>
 Por exemplo, se a tentativa de obter uma conexão com o banco de dados falhar, o objeto conn permanecerá como null. Se tentarmos usar esse objeto posteriormente sem verificar se é nulo, isso resultará em uma NullPointerException.<br><br>
 Portanto, é importante adicionar verificações de nulidade (null checks) adequadas para garantir que o código trate corretamente essas situações e evite exceções não tratadas.</p>
 
