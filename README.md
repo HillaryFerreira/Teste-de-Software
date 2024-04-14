@@ -12,4 +12,14 @@
 
 <h2>TODOS OS NULLPOINTERS FORAM TRATADOS?</h2>
 <p>não houve tratamento adequado para possíveis NullPointerExceptions. O código não verifica se os objetos retornados, como Connection, Statement e ResultSet, são nulos antes de tentar acessá-los ou utilizá-los. Isso pode levar a exceções não tratadas se esses objetos não forem inicializados corretamente ou se ocorrerem erros durante sua criação ou execução.<br>
-Por exemplo, se a tentativa de obter uma conexão com o banco de dados falhar, o objeto conn permanecerá como null. Se tentarmos usar esse objeto posteriormente sem verificar se é nulo, isso resultará em uma NullPointerException.</p>
+Por exemplo, se a tentativa de obter uma conexão com o banco de dados falhar, o objeto conn permanecerá como null. Se tentarmos usar esse objeto posteriormente sem verificar se é nulo, isso resultará em uma NullPointerException.<br><br>
+Portanto, é importante adicionar verificações de nulidade (null checks) adequadas para garantir que o código trate corretamente essas situações e evite exceções não tratadas.</p>
+
+<h2>A ARQUITETURA UTILIZADA FOI DEVIDAMENTE RESPEITADA?</h2>
+<p>O código não segue as melhores práticas de separação e pode não ser facilmente escalável ou modificada futuramente.</p>
+
+<h2>AS CONEXÕES UTILIZADAS FORAM FECHADAS?</h2>
+<p>O código estabelece uma conexão com um banco de dados MySQL usando JDBC. No entanto, não há chamadas explícitas para fechar as conexões com o banco de dados (Connection), nem para fechar os objetos Statement e ResultSet, que são recursos importantes que precisam ser liberados após o uso.<br><br>
+Portanto, é importante adicionar chamadas para fechar as conexões com o banco de dados (close()) após o término de sua utilização.</p>
+
+
