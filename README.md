@@ -25,6 +25,8 @@ Portanto, é importante adicionar chamadas para fechar as conexões com o banco 
 <h2>Erro do código:</h2>
 <ul>
   <li>As váriaveis 'nome' e 'result' foram declaradas mas não inicializadas de forma explícita. É importante que sejam inicializadas para que seja evitado erros lógicos no código. </li>
+
+  <li>Na linha 25, há uma reatribuição incorreta da variável sql, que faz com que a instrução SQL construída anteriormente seja substituída por uma string vazia. Isso ocorre porque a linha sql = ""; deveria estar dentro do bloco try, após a construção da consulta SQL.</li>
 </ul>
 
 
