@@ -1,4 +1,4 @@
-# 🧰 Teste de Caixa Branca
+# Teste de Caixa Branca
 
 ## O que está sendo feito?
 - O código é um processo de login.
